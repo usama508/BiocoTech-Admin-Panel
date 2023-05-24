@@ -13,14 +13,14 @@ import { useRouter } from "next/router";
 import { PaperClipIcon } from "@heroicons/react/20/solid";
 import { useRef } from "react";
 import { RxHamburgerMenu } from "react-icons/rx";
-import { useAuth } from "../../context/AuthContext";
+//import { useAuth } from "../../context/AuthContext";
 import axios from "axios";
 import { apiUrl } from "../../constants";
 
 function links({ initialData }) {
   const router = useRouter();
   const sideBarRef = useRef();
-  const { logout } = useAuth();
+  //const { logout } = useAuth();
 if (router.isFallback) {
     return <h3>Loading...</h3>;
   }
@@ -68,7 +68,7 @@ if (router.isFallback) {
   
 
   //Get Request
-  const fetchLink = async () => {
+  /*const fetchLink = async () => {
     console.log("hi rfresh");
     await axios.get(`${apiUrl}/api/links`).then((res) => {
       console.log(res.data);
@@ -76,7 +76,7 @@ if (router.isFallback) {
      
       
     });
-  };
+  };*/
 
   //Put Request link
 
@@ -105,10 +105,10 @@ if (router.isFallback) {
 
   
 
-  useEffect(() => {
+  /*useEffect(() => {
     fetchLink();
     //console.log("company policy? ", companyPolicy);
-  }, []);
+  }, []);*/
 
   function toogleSideBar() {
     sideBarRef.current.classList.toggle("-translate-x-full");

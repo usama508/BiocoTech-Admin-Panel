@@ -16,9 +16,9 @@ import { BsEnvelopeFill } from 'react-icons/bs'
 import Stats from "./Stats";
 import { useRef } from "react";
 import { RxHamburgerMenu } from "react-icons/rx";
-import { useAuth } from "../context/AuthContext";
+//import { useAuth } from "../context/AuthContext";
 import axios from "axios";
-import { withProtected } from "../context/Route";
+//import { withProtected } from "../context/Route";
 import { apiUrl } from "../constants";
 import dashboard from "./DashboardData";
 
@@ -27,7 +27,7 @@ import dashboard from "./DashboardData";
 function SideBars({ auth }) {
   const router = useRouter();
   const sideBarRef = useRef();
-  const { logout } = auth;
+  //const { logout } = auth;
   const [company, setCompany] = useState([]);
   const [staff, setStaff] = useState([]);
   const [data, setData] = useState([]);
@@ -38,7 +38,7 @@ function SideBars({ auth }) {
     sideBarRef.current.classList.toggle("-translate-x-full");
   }
 
-  async function signOut() {
+  {/*async function signOut() {
     try {
       await logout();
       router.push("/login");
@@ -46,7 +46,7 @@ function SideBars({ auth }) {
     } catch (e) {
       console.log(e.message);
     }
-  }
+  }*/}
 
   function isActive(route) {
     if (route == router.pathname) {
@@ -199,7 +199,7 @@ function SideBars({ auth }) {
               <div className="flex flex-shrink-0 border-t  border-lime-500 p-4">
                 <div className="flex items-center font-abc ">
                   <div className="bg-lime-500 h-9 w-9 rounded-full">
-                    <button onClick={signOut}>
+                    <button /*onClick={signOut}*/>
                       <CiLogout className=" ml-2 mt-2 text-xl text-white " />
                     </button>
                   </div>
@@ -332,7 +332,7 @@ function SideBars({ auth }) {
     </>
   );
 }
-export default withProtected(SideBars);
+export default /*withProtected*/SideBars;
 
 {/*export async function getServerSideProps() {
   

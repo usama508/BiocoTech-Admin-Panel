@@ -30,9 +30,9 @@ import { ImLink } from "react-icons/im";
 import { CiLogout } from "react-icons/ci";
 import { useRouter } from "next/router";
 import { useRef } from "react";
-import { useAuth } from "../../context/AuthContext";
-import { withProtected } from "../../context/Route";
-import { apiUrl } from "../../constants";
+//import { useAuth } from "../../context/AuthContext";
+//import { withProtected } from "../../context/Route";
+//import { apiUrl } from "../../constants";
 
 
 
@@ -53,7 +53,7 @@ function comp() {
 
 
 
-  const { logout } = useAuth();
+  //const { logout } = useAuth();
 
   if (router.isFallback) {
     return <h3>Loading...</h3>;
@@ -383,4 +383,4 @@ function comp() {
   );
 }
 
-export default withProtected(comp);
+export default /*withProtected*/comp;
