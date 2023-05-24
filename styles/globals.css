@@ -1,0 +1,33 @@
+
+/*@import url('../assest/fonts/cocogoose-pro.regular.ttf');*/
+/*@import url('https://fonts.cdnfonts.com/css/cocogoose');*/
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    @font-face{
+        font-family: 'Italic';
+        src: url('/fonts/Cocogoose Pro Italic-trial.ttf') format('ttf');
+        }
+    @font-face {
+        font-family: 'Light';
+        src: url('/fonts/Cocogoose Pro Light Italic-trial.ttf') format('ttf');
+    }
+    @font-face {
+        font-family: ' Semilight';
+        src: url('/fonts/Cocogoose Pro Semilight Italic-trial.ttf') format('ttf');
+    }
+    @font-face {
+        font-family: ' Thin';
+        src: url('/fonts/Cocogoose Pro Thin Italic-trial.ttf') format('ttf');
+    }
+    @font-face {
+        font-family: ' Thin-trial';
+         src: url('/fonts/Cocogoose Pro Thin-trial.ttf') format('ttf');
+    }
+    @font-face {
+        font-family: ' Ultralight';
+       src: url('/fonts/Cocogoose Pro UltraLight Italic-trial.ttf') format('ttf');
+    }
+}
